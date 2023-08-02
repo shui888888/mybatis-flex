@@ -78,7 +78,7 @@ QueryWrapper query = QueryWrapper.create()
         .and(ACCOUNT.USER_NAME.like("zhang").or(ACCOUNT.USER_NAME.like("li")));
 
 // execute SQL：
-// ELECT * FROM tb_account
+// SELECT * FROM tb_account
 // WHERE tb_account.id >=  100
 // AND (tb_account.user_name LIKE '%zhang%' OR tb_account.user_name LIKE '%li%' )
 List<Account> accounts = mapper.selectListByQuery(query);
@@ -96,7 +96,7 @@ QueryWrapper query = QueryWrapper.create()
         .orderBy(ACCOUNT.ID.desc());
 
 // execute SQL：
-// ELECT * FROM tb_account
+// SELECT * FROM tb_account
 // WHERE tb_account.id >=  100
 // AND (tb_account.user_name LIKE '%zhang%' OR tb_account.user_name LIKE '%li%' )
 // ORDER BY tb_account.id DESC
